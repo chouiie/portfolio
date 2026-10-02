@@ -355,6 +355,10 @@ article h2 {
 
 .slide h2 {
   margin-top: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  color: var(--pink-dark);
+  background: none;
 }
 
 .slide p {
