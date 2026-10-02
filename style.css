@@ -291,3 +291,7 @@ button:active {
     font-size: 1.8rem;
   }
 }
+
+article h2 {
+  margin-top: 0;
+}
