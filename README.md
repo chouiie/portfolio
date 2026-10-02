@@ -1,29 +1,7 @@
 ![Soft pink lily on a pale gray background surrounded by small silver stars](images/readme-banner.png)
 
-# 🌸 Hi, I'm Chau! 🌸
+# Hi, I'm Chau! 🍵
 
-✨ Welcome to my GitHub page! ✨ I'm so happy you stopped by 💕
+Welcome to my GitHub page! 🌸 I'm a Data Science student at UC San Diego. 📊 When I'm not coding, you can find me drinking matcha 🍵 or out shopping. 🛍️
 
-## 👩‍💻 About Me
-
-🎓 I'm a Data Science student at **UC San Diego** 🔱  
-📊 I love playing with data, building dashboards, and figuring out what the numbers are really saying  
-🌱 I'm always learning something new and trying out fun projects  
-
-## 💖 Things I Love
-
-🍵 **Matcha:** my forever favorite drink, iced or hot, always with oat milk vibes  
-🛍️ **Shopping:** browsing cute stores and finding little treasures  
-🌷 Pretty flowers, pastel colors, and anything aesthetic  
-
-## 🗂️ What You'll Find Here
-
-🏠 My personal website and portfolio  
-🚀 Projects I've worked on  
-📄 My resume  
-💌 A way to get in touch with me  
-
-## 📫 Let's Connect!
-
-Feel free to look around and reach out anytime 🥰  
-Thanks for visiting, and have a lovely day! 🌈☁️🍓
+This is where I share my personal website and portfolio. 💻 Feel free to look around at my projects, check out my resume, or send me a message through my contact page. 💌 Thanks so much for stopping by, and have a lovely day! ✨
