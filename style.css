@@ -364,7 +364,7 @@ article h2 {
 .carousel-prev,
 .carousel-next {
   position: absolute;
-  top: calc(50% - 1.5rem);
+  top: calc(50% + 1rem);
   translate: 0 -50%;
   width: 2.75rem;
   height: 2.75rem;
@@ -431,4 +431,8 @@ article h2 {
 .carousel-dots button:active {
   transform: none;
   box-shadow: none;
+}
+
+.carousel > h2 {
+  margin-top: 0;
 }
