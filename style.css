@@ -1,6 +1,293 @@
+:root {
+  --grass: #7fb76a;
+  --grass-dark: #6aa357;
+  --cream: #fbf6e3;
+  --cream-dot: #efe6c8;
+  --brown: #6e5a4c;
+  --brown-light: #a08c7c;
+  --pink: #f4a9bc;
+  --pink-light: #fde4eb;
+  --pink-dark: #e27a95;
+  --teal: #4cc6b4;
+  --teal-dark: #33a593;
+
+  /* Cherry blossom petals scattered on a 300px tile */
+  --petals: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cg fill='%23f7b8c9'%3E%3Cellipse cx='30' cy='40' rx='9' ry='5' transform='rotate(30 30 40)'/%3E%3Cellipse cx='160' cy='25' rx='8' ry='5' transform='rotate(-20 160 25)'/%3E%3Cellipse cx='250' cy='90' rx='10' ry='6' transform='rotate(60 250 90)'/%3E%3Cellipse cx='90' cy='150' rx='8' ry='5' transform='rotate(-45 90 150)'/%3E%3Cellipse cx='210' cy='200' rx='9' ry='5' transform='rotate(15 210 200)'/%3E%3Cellipse cx='40' cy='260' rx='8' ry='5' transform='rotate(70 40 260)'/%3E%3C/g%3E%3Cg fill='%23fde0e8'%3E%3Cellipse cx='120' cy='80' rx='7' ry='4' transform='rotate(-60 120 80)'/%3E%3Cellipse cx='280' cy='250' rx='8' ry='5' transform='rotate(40 280 250)'/%3E%3Cellipse cx='150' cy='270' rx='7' ry='4' transform='rotate(-10 150 270)'/%3E%3Cellipse cx='60' cy='200' rx='6' ry='4' transform='rotate(25 60 200)'/%3E%3C/g%3E%3Cg fill='%23ec97ad'%3E%3Cellipse cx='200' cy='130' rx='7' ry='4' transform='rotate(-35 200 130)'/%3E%3Cellipse cx='100' cy='20' rx='6' ry='4' transform='rotate(50 100 20)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html {
+  /* Grassy ground under the cherry trees */
+  min-height: 100%;
+  background-color: var(--grass);
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--grass-dark) 2px, transparent 3px),
+    radial-gradient(circle at 70% 80%, #8fc47a 2px, transparent 3px);
+  background-size: 40px 40px, 56px 56px;
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--brown);
+
+  /* The page is a cream menu screen with big soft dots */
+  max-width: 52rem;
+  margin: 2.5rem auto;
+  padding: 0 2.5rem 2.5rem;
+  background-color: var(--cream);
+  background-image: radial-gradient(circle, var(--cream-dot) 6px, transparent 7px);
+  background-size: 60px 60px;
+  background-position: 30px 120px;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+}
+
+/* Petals drifting across the grass behind the page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--petals);
+  background-size: 300px 300px;
+  animation: petals-fall 30s linear infinite;
+}
+
+@keyframes petals-fall {
+  to {
+    background-position: 300px 600px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+/* Pink plaid header bar with a scalloped bottom edge */
+nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 -2.5rem 2.5rem;
+  padding: 1.25rem 2.5rem;
+  background-color: var(--pink);
+  background-image:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.18) 0 24px, transparent 24px 48px),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.18) 0 24px, transparent 24px 48px);
+  border-radius: 2rem 2rem 0 0;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 14px;
+  background: radial-gradient(circle at 16px 0, var(--pink) 15px, transparent 16px) repeat-x;
+  background-size: 32px 14px;
+}
+
+nav a {
+  padding: 0.4em 1.1em;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: var(--brown);
+  text-decoration: none;
+  background: var(--cream);
+  border-radius: 999px;
+  box-shadow: 0 3px 0 var(--pink-dark);
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+nav a:hover {
+  color: white;
+  background: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 var(--teal-dark);
+}
+
+h1, h2, h3 {
+  font-family: "Fredoka", "Nunito", system-ui, sans-serif;
+  line-height: 1.2;
+}
+
+/* Name plate */
+h1 {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.3em 1em;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  background: white;
+  border: 4px solid var(--pink);
+  border-radius: 999px;
+}
+
+h1::before {
+  content: "🌸 ";
+}
+
+/* Section labels look like the "Custom Designs" tab */
+h2 {
+  display: inline-block;
+  margin: 2.5rem 0 0.75rem;
+  padding: 0.25em 1em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  background: var(--pink-dark);
+  border-radius: 999px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+
+a {
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--pink-dark);
+}
+
+/* Photo framed like a canvas on an easel */
+img {
+  max-width: 100%;
+  border: 8px solid white;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 0 #c9a27a;
+}
+
+/* Resume entries sit in soft pink tool-panel boxes */
+article {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--pink-light);
+  border-radius: 1.5rem;
+}
+
+article header p {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--brown-light);
+}
+
+section > ul {
+  padding: 1rem 1.25rem 1rem 2.5rem;
+  background: var(--pink-light);
+  border-radius: 1.5rem;
+}
+
+li::marker {
+  content: "✿ ";
+  color: var(--pink-dark);
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 32rem;
+  padding: 1.5rem;
+  background: var(--pink-light);
+  border-radius: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 0.6em 0.9em;
+  color: var(--brown);
+  background: white;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+/* Teal "+ Done" style button */
+button {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4em 1.2em 0.4em 0.5em;
+  font: 600 1.1rem "Fredoka", sans-serif;
+  color: white;
+  background: var(--teal);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--teal-dark);
+  cursor: pointer;
+}
+
+button::before {
+  content: "+";
+  display: grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--teal);
+  background: white;
+  border-radius: 50%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--teal-dark);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--teal-dark);
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 1rem;
+    padding: 0 1.25rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  nav {
+    margin: 0 -1.25rem 2rem;
+    padding: 1rem 1.25rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
