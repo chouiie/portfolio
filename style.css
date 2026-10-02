@@ -18,7 +18,17 @@
 html {
   /* Cherry blossom meadow behind the page */
   min-height: 100%;
-  background: var(--grass) url("images/background.jpg") center / cover fixed;
+  background: var(--grass);
+}
+
+/* Slightly blurred so the small background image doesn't look pixelated */
+html::before {
+  content: "";
+  position: fixed;
+  inset: -20px;
+  z-index: -1;
+  background: url("images/background.jpg") center / cover;
+  filter: blur(3px);
 }
 
 body {
