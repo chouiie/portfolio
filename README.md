@@ -1,5 +1,5 @@
-![Illustration of a cartoon girl with big eyes, black hair, and rosy cheeks](images/readme-banner.png)
+![Soft pastel background with a blurred orange flower, a pink circle, a pink heart, and a green four-leaf clover](images/readme-banner.png)
 
-# Chau Nguyen
+# Hi, I'm Chau! 🍵
 
-This is my portfolio.
+Welcome to my GitHub page! I'm a Data Science student at UC San Diego. When I'm not coding, you can find me drinking matcha or out shopping.
