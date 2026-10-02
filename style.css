@@ -295,3 +295,25 @@ button:active {
 article h2 {
   margin-top: 0;
 }
+
+/* Two photos side by side, stacked on small screens */
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.photos img {
+  height: 20rem;
+  width: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .photos img {
+    height: auto;
+    width: 100%;
+  }
+}
