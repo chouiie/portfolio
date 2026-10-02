@@ -356,7 +356,10 @@ article h2 {
 .slide h2 {
   margin-top: 0;
   padding: 0;
-  font-size: 1.6rem;
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
   color: var(--pink-dark);
   background: none;
 }
