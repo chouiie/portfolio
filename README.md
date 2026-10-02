@@ -1,4 +1,4 @@
-![Soft pastel background with a blurred orange flower, a pink circle, a pink heart, and a green four-leaf clover](images/readme-banner.jpg)
+![Soft pink lily on a pale gray background surrounded by small silver stars](images/readme-banner.png)
 
 # Hi, I'm Chau! 🍵
 
