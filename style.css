@@ -16,13 +16,9 @@
 }
 
 html {
-  /* Grassy ground under the cherry trees */
+  /* Cherry blossom meadow behind the page */
   min-height: 100%;
-  background-color: var(--grass);
-  background-image:
-    radial-gradient(circle at 20% 30%, var(--grass-dark) 2px, transparent 3px),
-    radial-gradient(circle at 70% 80%, #8fc47a 2px, transparent 3px);
-  background-size: 40px 40px, 56px 56px;
+  background: var(--grass) url("images/background.jpg") center / cover fixed;
 }
 
 body {
@@ -134,8 +130,15 @@ h1 {
   border-radius: 999px;
 }
 
+/* Little villager standing next to the name */
 h1::before {
-  content: "🌸 ";
+  content: "";
+  display: inline-block;
+  width: 1.3em;
+  height: 2.1em;
+  margin: -0.6em 0.3em -0.4em -0.3em;
+  vertical-align: bottom;
+  background: url("images/character.png") center bottom / contain no-repeat;
 }
 
 /* Section labels look like the "Custom Designs" tab */
