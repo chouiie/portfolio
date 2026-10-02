@@ -19,10 +19,86 @@
 
     <h1>Chau Nguyen</h1>
     <p>Welcome to my personal site and portfolio! Here you can find information about my projects, skills, and experiences. Feel free to explore and reach out if you have any questions or opportunities!</p>
-    <p>Outside of school, my hobbies are drinking matcha and shopping.</p>
 
-    <div class="photos">
-        <img src="images/profile-2.jpg" alt="Chau standing on a cliff above the ocean at sunset">
-    </div>
+    <section class="carousel" aria-roledescription="carousel" aria-label="About me">
+        <div class="slides" tabindex="0">
+            <figure class="slide" aria-roledescription="slide" aria-label="1 of 5">
+                <img src="images/profile-2.jpg" alt="Chau standing on a cliff above the ocean at sunset">
+                <figcaption>
+                    <h2>Hi, my name is Chau!</h2>
+                    <p>Aside from coding, I like to eat food, drink matcha, go shopping, and go to the beach. Swipe through to see more!</p>
+                </figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="slide" aria-label="2 of 5">
+                <img src="images/slide-food.jpg" alt="Creamy udon topped with salmon roe and a soft egg next to a tuna rice bowl with seaweed">
+                <figcaption>
+                    <h2>Eating good food 🍜</h2>
+                    <p>I'm always on the hunt for a new spot to try.</p>
+                </figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="slide" aria-label="3 of 5">
+                <img src="images/slide-froyo.jpg" alt="Two cups of frozen yogurt, one topped with pistachio, in a white Greek-style shop">
+                <figcaption>
+                    <h2>Sweet treats 🍦</h2>
+                    <p>There's always room for dessert.</p>
+                </figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="slide" aria-label="4 of 5">
+                <img src="images/slide-matcha.jpg" alt="Bright green matcha being poured over milk in an iced cup">
+                <figcaption>
+                    <h2>Drinking matcha 🍵</h2>
+                    <p>My forever favorite drink.</p>
+                </figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="slide" aria-label="5 of 5">
+                <img src="images/slide-beach.jpg" alt="Chau standing on a green coastal trail above the beach on a sunny day">
+                <figcaption>
+                    <h2>Going to the beach 🌊</h2>
+                    <p>Sunshine, ocean views, and long walks along the coast.</p>
+                </figcaption>
+            </figure>
+        </div>
+
+        <button class="carousel-prev" aria-label="Previous slide">‹</button>
+        <button class="carousel-next" aria-label="Next slide">›</button>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        const track = carousel.querySelector(".slides");
+        const slides = [...track.children];
+        const dotsBox = carousel.querySelector(".carousel-dots");
+
+        const dots = slides.map((slide, i) => {
+            const dot = document.createElement("button");
+            dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+            dot.addEventListener("click", () => goTo(i));
+            dotsBox.append(dot);
+            return dot;
+        });
+
+        function current() {
+            return Math.round(track.scrollLeft / track.clientWidth);
+        }
+
+        function goTo(i) {
+            const n = (i + slides.length) % slides.length; // wrap around at the ends
+            track.scrollTo({ left: n * track.clientWidth, behavior: "smooth" });
+        }
+
+        function updateDots() {
+            dots.forEach((dot, i) => dot.setAttribute("aria-current", i === current()));
+        }
+
+        carousel.querySelector(".carousel-prev").addEventListener("click", () => goTo(current() - 1));
+        carousel.querySelector(".carousel-next").addEventListener("click", () => goTo(current() + 1));
+        track.addEventListener("scroll", updateDots);
+        track.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") { e.preventDefault(); goTo(current() - 1); }
+            if (e.key === "ArrowRight") { e.preventDefault(); goTo(current() + 1); }
+        });
+        updateDots();
+    </script>
 </body>
 </html>

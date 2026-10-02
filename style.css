@@ -309,24 +309,126 @@ article h2 {
   margin-top: 0;
 }
 
-/* Two photos side by side, stacked on small screens */
-.photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+/* Swipeable "about me" slideshow on the home page */
+.carousel {
+  position: relative;
+  margin-top: 2rem;
 }
 
-.photos img {
-  height: 20rem;
-  width: auto;
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 1.5rem;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 1.5rem 4rem;
+  box-sizing: border-box;
+  background: var(--pink-light);
+  border-radius: 1.5rem;
+  scroll-snap-align: start;
+}
+
+.slide img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
+.slide h2 {
+  margin-top: 0;
+}
+
+.slide p {
+  font-size: 1.15rem;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  translate: 0 -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  justify-content: center;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.carousel-prev::before,
+.carousel-next::before {
+  content: none;
+}
+
+.carousel-prev {
+  left: 0.6rem;
+}
+
+.carousel-next {
+  right: 0.6rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.carousel-dots button {
+  width: 0.9rem;
+  height: 0.9rem;
+  padding: 0;
+  background: var(--cream-dot);
+  box-shadow: none;
+}
+
+.carousel-dots button::before {
+  content: none;
+}
+
+.carousel-dots button[aria-current="true"] {
+  background: var(--pink-dark);
+}
+
 @media (max-width: 600px) {
-  .photos img {
-    height: auto;
-    width: 100%;
+  .slide {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem 1rem 1.5rem;
   }
+
+  .slide img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    top: 40%;
+  }
+}
+
+.carousel-dots button:hover,
+.carousel-dots button:active {
+  transform: none;
+  box-shadow: none;
 }
