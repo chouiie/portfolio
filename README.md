@@ -1,3 +1,5 @@
-# Welcome to GitHub Desktop!
+![Illustration of a cartoon girl with big eyes, black hair, and rosy cheeks](images/readme-banner.png)
 
-This is my portfolio 
+# Chau Nguyen
+
+This is my portfolio.
