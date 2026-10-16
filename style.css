@@ -37,6 +37,7 @@ nav a {
 }
 
 nav a.current {
+  font-weight: bold;
   border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
@@ -60,7 +61,7 @@ h6 {
 }
 
 h1 {
-  font-size: 400%;
+  font-size: 300%;
 }
 
 img {
@@ -106,64 +107,4 @@ select {
   top: 1rem;
   right: 1rem;
   font-size: 80%;
-}
-
-/* Home page slideshow */
-
-.slides {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.slide {
-  flex: 0 0 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  margin: 0;
-  scroll-snap-align: start;
-}
-
-.slide img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-.carousel {
-  text-align: center;
-}
-
-.carousel-dots {
-  display: inline-flex;
-  gap: 0.5rem;
-  margin-inline: 1rem;
-}
-
-.carousel-dots button {
-  width: 0.75rem;
-  height: 0.75rem;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: color-mix(in oklch, canvastext, canvas 75%);
-}
-
-.carousel-dots button[aria-current="true"] {
-  background: var(--color-accent);
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 250%;
-  }
-
-  .slide {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
 }
