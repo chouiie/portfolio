@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Ocean Pulse: Ocean Health Classification Dashboard",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Python · DataHacks 2026, 3rd place out of 86 teams (ML/AI track). Trained a Random Forest on 286,819 CalCOFI samples (98% accuracy) to classify ocean regions as Healthy, Stressed, or Critical, and built a Streamlit dashboard with LLM-powered, region-specific policy recommendations."
+  },
+  {
+    "title": "Predicting NBA Success from NCAA Performance Metrics",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Python · Pandas · Regression. Merged 3 data sources into a dataset of 386 drafted players and built an OLS regression model; college Box Plus-Minus was the strongest predictor of NBA impact (β = 0.40, p < 0.001)."
+  },
+  {
+    "title": "Image and Audio Processing App",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Python. Implemented grayscale, rotation, edge detection, and audio effects from scratch, plus a KNN classifier for RGB images with 90% label accuracy and no external ML libraries."
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "HTML, CSS, and JavaScript site with a dynamic nav bar, theme switcher, resume, contact form, and a projects page rendered from JSON."
+  },
+  {
+    "title": "Lab 3: Navigation and Theme Switcher",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built a JavaScript-generated navigation bar and a light/dark theme switcher that remembers the visitor's preference."
+  },
+  {
+    "title": "Lab 2: CSS Layout and Styling",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Styled the portfolio with CSS custom properties, grid, and responsive layouts."
+  },
+  {
+    "title": "Lab 1: Intro to HTML",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created the first version of the site: home, projects, resume, and contact pages."
+  },
+  {
+    "title": "Placeholder: Data Visualization Project",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder: describe a visualization you made, the dataset, and what it shows."
+  },
+  {
+    "title": "Placeholder: Data Structures Assignment",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder: describe the data structures you implemented and what they were used for."
+  },
+  {
+    "title": "Placeholder: Python Data Analysis Notebook",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder: describe a Jupyter notebook exploring and cleaning a dataset."
+  },
+  {
+    "title": "Placeholder: SQL Database Project",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder: describe a database you designed and the queries you wrote."
+  },
+  {
+    "title": "Placeholder: Early Programming Project",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder: describe an early project that sparked your interest in data."
+  }
+]
