@@ -87,3 +87,51 @@ form?.addEventListener('submit', function (event) {
 
   location.href = `${form.action}?${params.join('&')}`;
 });
+// ===== Lab 4: data loading and rendering =====
+
+
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!(containerElement instanceof Element)) {
+    console.error('renderProjects: invalid container element');
+    return;
+  }
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadings.includes(headingLevel)) headingLevel = 'h2';
+
+  containerElement.innerHTML = '';
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    return;
+  }
+
+  for (const project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title ?? 'Untitled'}</${headingLevel}>
+      <img src="${project.image ?? ''}" alt="${project.title ?? ''}">
+      <div>
+        <p>${project.description ?? ''}</p>
+        <p class="project-year">${project.year ?? ''}</p>
+      </div>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
