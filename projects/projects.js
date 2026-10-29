@@ -4,20 +4,14 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 
-// Step 1.6: project count
 const title = document.querySelector('.projects-title');
 if (title && projects) {
   title.textContent = `${projects.length} Projects`;
 }
 
-// ===== Lab 5: pie chart + filtering =====
-
 let query = '';
-// Track the selected year (not just its index), because the slice order
-// changes whenever the search changes which years are in the pie
 let selectedYear = null;
 
-// Color by year so each year keeps its color as the pie is filtered
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let sliceGenerator = d3.pie().value((d) => d.value).sort(null);
@@ -71,18 +65,13 @@ function renderPieChart(projectsGiven) {
   });
 }
 
-// Extra credit (Step 5.4): both the search bar and the pie go through this one
-// function, so each filter is always applied on top of the other.
 function applyFilters() {
-  // The pie shows the search results, so every year matching the query stays clickable
   let searchedProjects = projects.filter(matchesQuery);
 
-  // Drop the selection if the search removed that year from the pie
   if (!searchedProjects.some((p) => p.year === selectedYear)) {
     selectedYear = null;
   }
 
-  // The project list uses the search AND the selected year
   let visibleProjects =
     selectedYear === null
       ? searchedProjects
