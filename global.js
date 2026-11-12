@@ -175,6 +175,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         <p class="file-name"><img src="${BASE_PATH}images/glass-star.png" alt="">${fileName}<span class="project-year">${project.year ?? ''}</span></p>
         <${headingLevel}>${project.title ?? 'Untitled'}</${headingLevel}>
         <p>${project.description ?? ''}</p>
+        ${project.url ? `<a class="project-link" href="${project.url}" target="_blank">view on GitHub ↗</a>` : ''}
       </div>
     `;
     containerElement.appendChild(article);

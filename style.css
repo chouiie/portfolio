@@ -666,6 +666,33 @@ h2.about-title {
   }
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
+.thanks {
+  margin-block: 3rem 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: var(--muted);
+
+  .kaomoji {
+    font-family: system-ui, sans-serif;
+    font-size: 1.3em;
+    white-space: nowrap;
+  }
+}
+
 h1.projects-title {
   font-family: var(--font-serif);
   font-style: italic;

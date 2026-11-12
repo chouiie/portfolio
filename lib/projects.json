@@ -3,13 +3,15 @@
     "title": "Ocean Pulse: Ocean Health Classification Dashboard",
     "year": "2026",
     "image": "images/projects/ocean-pulse.svg",
-    "description": "Python · DataHacks 2026, 3rd place out of 86 teams (ML/AI track). Trained a Random Forest on 286,819 CalCOFI samples (98% accuracy) to classify ocean regions as Healthy, Stressed, or Critical, and built a Streamlit dashboard with LLM-powered, region-specific policy recommendations."
+    "description": "Python · DataHacks 2026, 3rd place out of 86 teams (ML/AI track). Trained a Random Forest on 286,819 CalCOFI samples (98% accuracy) to classify ocean regions as Healthy, Stressed, or Critical, and built a Streamlit dashboard with LLM-powered, region-specific policy recommendations.",
+    "url": "https://github.com/chouiie/datahacks-2026"
   },
   {
     "title": "Predicting NBA Success from NCAA Performance Metrics",
     "year": "2025",
     "image": "images/projects/nba-success.svg",
-    "description": "Python · Pandas · Regression. Merged 3 data sources into a dataset of 386 drafted players and built an OLS regression model; college Box Plus-Minus was the strongest predictor of NBA impact (β = 0.40, p < 0.001)."
+    "description": "Python · Pandas · Regression. Merged 3 data sources into a dataset of 386 drafted players and built an OLS regression model; college Box Plus-Minus was the strongest predictor of NBA impact (β = 0.40, p < 0.001).",
+    "url": "https://github.com/chouiie/Predicting-NBA-Impact-from-College-Performance."
   },
   {
     "title": "Image and Audio Processing App",
