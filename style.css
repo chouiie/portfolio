@@ -414,49 +414,47 @@ button:hover {
 
 .photo-stack {
   position: relative;
-  width: min(100%, 44rem);
-  aspect-ratio: 5 / 4;
-  margin-block: 1rem 3rem;
+  width: min(100%, 40rem);
+  aspect-ratio: 4 / 3;
+  margin: 2.5rem auto 3rem;
 }
 
 .photo {
   position: absolute;
   margin: 0;
-  width: 38%;
+  width: 44%;
   aspect-ratio: 2 / 3;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 14px 30px rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 14px 30px rgb(0 0 0 / 16%);
   transition: rotate 300ms, translate 300ms;
 
-  img {
+  > img:first-child {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  &.front {
-    left: 2%;
-    top: 14%;
-    rotate: -4deg;
-    z-index: 2;
+  &.third {
+    left: 4%;
+    top: 7%;
+    rotate: -10deg;
   }
 
   &.back {
-    left: 31%;
-    top: 3%;
-    rotate: 3deg;
-    z-index: 1;
+    left: 50%;
+    top: 0;
+    rotate: 5deg;
   }
 
-  &.third {
-    left: 60%;
-    top: 16%;
-    width: 34%;
-    rotate: 8deg;
+  &.front {
+    left: 25%;
+    top: 6%;
+    rotate: -5deg;
+    z-index: 2;
   }
 
   &:hover {
-    translate: 0 -6px;
+    translate: 0 -8px;
     z-index: 4;
   }
 }
@@ -474,22 +472,83 @@ button:hover {
   text-shadow: 0 0 6px rgb(255 120 30 / 70%);
 }
 
+/* Star paperclip straddling the top edge of the front photo */
+/* Star paperclip holding the top edge of the front photo */
 .clip {
   position: absolute;
-  left: 26%;
-  top: 7%;
+  left: 50%;
+  top: -16%;
+  width: 40%;
+  translate: -50% 0;
+  rotate: 4deg;
   z-index: 3;
-  width: 13%;
-  rotate: -12deg;
   pointer-events: none;
-  filter: drop-shadow(1px 3px 2px rgb(0 0 0 / 30%));
+  filter: drop-shadow(0 0 1px rgb(40 40 50 / 90%)) drop-shadow(0 0 3px rgb(255 255 255 / 80%)) drop-shadow(2px 4px 3px rgb(0 0 0 / 35%));
+}
+
+h2.about-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(3.25rem, 8vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-block: 1rem 0.75rem;
+
+  &::before {
+    content: none;
+  }
 }
 
 .bio {
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.7;
   color: color-mix(in oklch, var(--ink), var(--muted) 35%);
-  max-width: 62ch;
+}
+
+.file-cards {
+  display: grid;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.file-card {
+  position: relative;
+  padding: 1.1rem 1.5rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: translate 200ms;
+
+  &:hover {
+    translate: 0 -3px;
+
+    img {
+      rotate: 20deg;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: color-mix(in oklch, var(--ink), var(--muted) 30%);
+  }
+
+  .file-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+
+    img {
+      width: 1.6rem;
+      transition: rotate 300ms;
+    }
+  }
 }
 
 /* Bottom dock of icon links */
