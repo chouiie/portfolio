@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=9">
     <script type="module" src="../global.js"></script>
 </head>
 <body>
-    <h1>Contact</h1>
+    <h1 class="page-title">Contact</h1>
 
-    <form action="mailto:chautsn0407@gmail.com">
-        <label>
-            Subject
-            <input name="subject">
-        </label>
-        <label>
-            Message
-            <textarea name="body"></textarea>
-        </label>
-        <button>Send</button>
-    </form>
+    <div class="contact-wrap">
+        <form action="mailto:chautsn0407@gmail.com">
+            <label>
+                Subject
+                <input name="subject">
+            </label>
+            <label>
+                Message
+                <textarea name="body"></textarea>
+            </label>
+            <button>Send</button>
+        </form>
+
+        <img class="contact-cat" src="../images/laptop-cat.png" alt="A cat with glasses typing on a laptop">
+    </div>
 </body>
 </html>
