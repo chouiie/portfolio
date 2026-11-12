@@ -3,12 +3,12 @@
 :root {
   color-scheme: light dark;
 
-  --paper: light-dark(#f4f3ef, #1c1c1e);
-  --card: light-dark(#fdfdfb, #262628);
+  --paper: light-dark(#fcfcfa, #1c1c1e);
+  --card: light-dark(#ffffff, #262628);
   --ink: light-dark(#2a2a2a, #ececea);
   --muted: light-dark(#8a8a86, #9a9a96);
-  --line: light-dark(#e4e2dc, #34343a);
-  --grid: light-dark(rgb(0 0 0 / 4.5%), rgb(255 255 255 / 4%));
+  --line: light-dark(#ebe9e4, #34343a);
+  --grid: light-dark(rgb(0 0 0 / 3.5%), rgb(255 255 255 / 4%));
   --navy: light-dark(#3e5aa8, #8fa6e6);
   --matcha: light-dark(#7a9a5a, #a3c283);
   --blush: light-dark(#f4c3cc, #7a4a55);
