@@ -155,14 +155,22 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   }
 
   for (const project of projects) {
+    // File-style label from the first few title words, e.g. "ocean-pulse.txt"
+    const fileName =
+      (project.title ?? 'untitled')
+        .split(':')[0]
+        .toLowerCase()
+        .split(/[^a-z0-9]+/)
+        .filter(Boolean)
+        .slice(0, 3)
+        .join('-') + '.txt';
+
     const article = document.createElement('article');
+    article.className = 'file-card';
     article.innerHTML = `
+      <p class="file-name"><img src="${BASE_PATH}images/glass-star.png" alt="">${fileName}<span class="project-year">${project.year ?? ''}</span></p>
       <${headingLevel}>${project.title ?? 'Untitled'}</${headingLevel}>
-      <img src="${project.image ?? ''}" alt="${project.title ?? ''}">
-      <div>
-        <p>${project.description ?? ''}</p>
-        <p class="project-year">${project.year ?? ''}</p>
-      </div>
+      <p>${project.description ?? ''}</p>
     `;
     containerElement.appendChild(article);
   }
