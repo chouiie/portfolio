@@ -1,5 +1,14 @@
 [
   {
+    "title": "Persuasive or Deceptive Visualization?",
+    "year": "2026",
+    "image": "images/projects/persuasive-viz.svg",
+    "description": "DSC 106 group project with Saahithi Myneedu and Adrianne See. Using World Bank unemployment data for 187 countries, we built two honest charts that argue opposite sides of whether youth unemployment is disproportionately high, then explored where persuasion ends and deception begins.",
+    "url": "https://chouiie.github.io/DSC-106/project2/project2_report.html",
+    "tag": "case study",
+    "linkLabel": "read the case study"
+  },
+  {
     "title": "Ocean Pulse: Ocean Health Classification Dashboard",
     "year": "2026",
     "image": "images/projects/ocean-pulse.svg",

@@ -661,8 +661,21 @@ h2.about-title {
     }
   }
 
+  .project-tag {
+    margin-left: auto;
+    padding: 0.1em 0.7em;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: color-mix(in oklch, var(--blush), var(--card) 40%);
+    color: var(--ink);
+  }
+
   .project-year {
     margin-left: auto;
+  }
+
+  .project-tag + .project-year {
+    margin-left: 0;
   }
 }
 
