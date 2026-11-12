@@ -8,10 +8,7 @@ function $$(selector, context = document) {
 
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'profile/', title: 'Profile' },
   { url: 'meta/', title: 'Meta' },
-  { url: 'https://drive.google.com/file/d/1oIZCvXnO-fspuchmxtbr2vuaV_4rJ6xf/view?usp=sharing', title: 'Resume' },
   { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/chouiie', title: 'GitHub' },
 ];
