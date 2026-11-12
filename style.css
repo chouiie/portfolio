@@ -412,24 +412,84 @@ button:hover {
 
 /* Profile page */
 
-.profile-intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
+.photo-stack {
+  position: relative;
+  width: min(100%, 44rem);
+  aspect-ratio: 5 / 4;
+  margin-block: 1rem 3rem;
+}
+
+.photo {
+  position: absolute;
+  margin: 0;
+  width: 38%;
+  aspect-ratio: 2 / 3;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 14px 30px rgb(0 0 0 / 14%);
+  transition: rotate 300ms, translate 300ms;
 
   img {
-    width: 12rem;
-    aspect-ratio: 4 / 5;
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
   }
 
-  .about {
-    flex: 1 1 20em;
-    margin: 0;
+  &.front {
+    left: 2%;
+    top: 14%;
+    rotate: -4deg;
+    z-index: 2;
   }
+
+  &.back {
+    left: 31%;
+    top: 3%;
+    rotate: 3deg;
+    z-index: 1;
+  }
+
+  &.third {
+    left: 60%;
+    top: 16%;
+    width: 34%;
+    rotate: 8deg;
+  }
+
+  &:hover {
+    translate: 0 -6px;
+    z-index: 4;
+  }
+}
+
+/* Orange date stamp, like an old film camera */
+.stamp {
+  position: absolute;
+  right: 6%;
+  bottom: 4%;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(0.8rem, 2.2vw, 1.05rem);
+  letter-spacing: 0.12em;
+  color: #ffa04d;
+  text-shadow: 0 0 6px rgb(255 120 30 / 70%);
+}
+
+.clip {
+  position: absolute;
+  left: 26%;
+  top: 7%;
+  z-index: 3;
+  width: 13%;
+  rotate: -12deg;
+  pointer-events: none;
+  filter: drop-shadow(1px 3px 2px rgb(0 0 0 / 30%));
+}
+
+.bio {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.7;
+  color: color-mix(in oklch, var(--ink), var(--muted) 35%);
+  max-width: 62ch;
 }
 
 /* Bottom dock of icon links */
@@ -465,6 +525,16 @@ button:hover {
       background: var(--paper);
       translate: 0 -3px;
     }
+  }
+
+  .dock-label {
+    padding: 0 0.5em;
+    border-radius: 999px;
+  }
+
+  a.current .dock-label {
+    background: var(--navy);
+    color: var(--card);
   }
 
   .icon {

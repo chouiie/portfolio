@@ -52,6 +52,29 @@ for (let p of pages) {
   nav.append(a);
 }
 
+// Bottom dock of quick links, on every page
+
+let dockLinks = [
+  { url: 'projects/', label: 'works', icon: '📁' },
+  { url: 'resume/', label: 'experience', icon: '💼' },
+  { url: 'profile/', label: 'profile', icon: `<img src="${BASE_PATH}images/profile-2.jpg" alt="">` },
+];
+
+let dock = document.createElement('div');
+dock.className = 'dock';
+dock.setAttribute('role', 'navigation');
+dock.setAttribute('aria-label', 'Quick links');
+
+for (let d of dockLinks) {
+  let a = document.createElement('a');
+  a.href = BASE_PATH + d.url;
+  a.innerHTML = `<span class="icon">${d.icon}</span><span class="dock-label">${d.label}</span>`;
+  a.classList.toggle('current', a.pathname === location.pathname);
+  dock.append(a);
+}
+
+document.body.append(dock);
+
 // Dark mode switch
 
 let osTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light';

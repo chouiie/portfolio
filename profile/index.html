@@ -6,17 +6,33 @@
     <title>Profile</title>
     <link rel="stylesheet" href="../style.css">
     <script type="module" src="../global.js"></script>
-    <script type="module" src="profile.js"></script>
 </head>
 <body>
-    <h1>Profile</h1>
+    <h1 class="visually-hidden">Profile</h1>
 
-    <div class="profile-intro">
-        <img src="../images/profile-2.jpg" alt="Chau standing on a cliff above the ocean at sunset">
-        <p class="about">Welcome to my personal site and portfolio! Here you can find information about my projects, skills, and experiences. Feel free to explore and reach out if you have any questions or opportunities!</p>
+    <div class="photo-stack">
+        <figure class="photo third">
+            <img src="../images/fall-street.jpg" alt="A street lined with red and yellow fall trees">
+            <span class="stamp" aria-hidden="true">11 02 25</span>
+        </figure>
+
+        <figure class="photo back">
+            <img src="../images/fall-me-2.jpg" alt="Chau standing on a leaf-covered street under a yellow tree">
+            <span class="stamp" aria-hidden="true">11 02 25</span>
+        </figure>
+
+        <figure class="photo front">
+            <img src="../images/fall-me.jpg" alt="Chau smiling under a red maple tree in fall">
+            <span class="stamp" aria-hidden="true">11 02 25</span>
+        </figure>
+
+        <img class="clip" src="../images/star-clip.png" alt="">
     </div>
 
-    <h2>My GitHub Stats</h2>
-    <div id="profile-stats"></div>
+    <p class="bio">Hi, I’m Chau! I’m a data science student at UC San Diego, minoring in business analytics, and I love finding the story hiding inside a messy dataset. Lately that has meant Tableau dashboards on real estate markets, an ocean health model that placed 3rd at DataHacks, and a weekly newsletter for DS3.</p>
+
+    <p class="bio">Outside of data, I’m happiest in fall: red maples, crunchy leaves, and an excuse to wear my coziest jacket. I’m always hunting for a good matcha latte, a new froyo spot, or a warm bowl of noodles, and I’ll never say no to watching the sunset from the cliffs by the ocean.</p>
+
+    <p class="bio">Feel free to look around, and reach out if you have any questions or opportunities!</p>
 </body>
 </html>
