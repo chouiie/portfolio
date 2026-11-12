@@ -21,50 +21,55 @@
         <div class="hero-cup">
             <button class="pet-cat" type="button" aria-label="Pet the cat">
                 <svg viewBox="0 0 240 260" aria-hidden="true">
-                    <ellipse cx="120" cy="238" rx="104" ry="14" fill="#e9e6df" />
+                    <defs>
+                        <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="3" result="noise" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                        </filter>
+                        <filter id="doodle" x="-10%" y="-10%" width="120%" height="120%">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" result="noise" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+                        </filter>
+                    </defs>
 
-                    <path d="M186 158 q42 -4 38 34 q-4 30 -44 26" fill="none" stroke="#fbfaf7" stroke-width="15" stroke-linecap="round" />
-                    <path d="M186 158 q42 -4 38 34 q-4 30 -44 26" fill="none" stroke="#e3e0d8" stroke-width="2" />
-
-                    <g class="head">
-                        <path d="M70 102 L78 46 L112 76 Z" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" stroke-linejoin="round" />
-                        <path d="M170 102 L162 46 L128 76 Z" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" stroke-linejoin="round" />
-                        <path d="M82 84 L85 60 L102 76 Z" fill="#f4b6c2" />
-                        <path d="M158 84 L155 60 L138 76 Z" fill="#f4b6c2" />
-
-                        <ellipse cx="120" cy="116" rx="58" ry="48" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
-                        <path d="M112 72 q8 10 16 0 M104 78 l4 8 M136 78 l-4 8" fill="none" stroke="#d99a5b" stroke-width="4" stroke-linecap="round" />
-
-                        <g class="eyes-open" fill="#2a2a2a">
-                            <ellipse cx="98" cy="112" rx="6" ry="8" />
-                            <ellipse cx="142" cy="112" rx="6" ry="8" />
-                            <circle cx="100" cy="109" r="2" fill="#fff" />
-                            <circle cx="144" cy="109" r="2" fill="#fff" />
-                        </g>
-                        <g class="eyes-happy" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round">
-                            <path d="M90 114 q8 -10 16 0" />
-                            <path d="M134 114 q8 -10 16 0" />
-                        </g>
-                        <g class="eyes-sleepy" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round">
-                            <path d="M90 112 q8 6 16 0" />
-                            <path d="M134 112 q8 6 16 0" />
-                        </g>
-
-                        <ellipse cx="84" cy="128" rx="9" ry="5" fill="#f4a3b4" opacity="0.6" />
-                        <ellipse cx="156" cy="128" rx="9" ry="5" fill="#f4a3b4" opacity="0.6" />
-                        <path d="M115 123 h10 l-5 6 Z" fill="#e8849a" />
-                        <path d="M120 129 q-4 6 -9 3 M120 129 q4 6 9 3" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" />
-                        <path d="M72 120 h-22 M72 128 l-20 5 M168 120 h22 M168 128 l20 5" stroke="#d99a5b" stroke-width="1.5" stroke-linecap="round" />
+                    <g filter="url(#crayon)" stroke="#1f4fa0" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="120" cy="230" rx="108" ry="21" fill="#f4f1ea" stroke-width="3.5" />
+                        <path d="M90 222 L94 236 H152 L156 222" fill="#f4f1ea" stroke-width="3" />
+                        <path d="M50 168 Q20 160 16 182 Q14 202 66 204" fill="none" stroke-width="4" />
+                        <path d="M42 146 A80 16 0 0 1 202 146 A80 16 0 0 1 42 146 Z" fill="#f4f1ea" stroke-width="3.5" />
+                        <ellipse cx="122" cy="149" rx="70" ry="11" fill="#fff" stroke="none" />
                     </g>
 
-                    <path d="M50 148 h140 l-13 74 q-4 18 -22 18 h-70 q-18 0 -22 -18 Z" fill="#fbfaf7" stroke="#e3e0d8" stroke-width="2" />
-                    <path d="M53 166 h134 l-2.5 12 h-129 Z" fill="#a8c47f" />
-                    <text x="120" y="212" text-anchor="middle" font-family="DM Mono, monospace" font-size="20" letter-spacing="1" fill="#3e5aa8">pet me</text>
-                    <rect x="44" y="140" width="152" height="12" rx="6" fill="#fbfaf7" stroke="#e3e0d8" stroke-width="2" />
+                    <g class="head" filter="url(#doodle)" stroke="#141414" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M64 176 Q52 140 54 106 Q56 68 80 50 Q93 42 103 52 L115 66 Q124 63 133 66 L145 52 Q155 42 166 52 Q188 72 186 106 Q186 140 176 176 Z" fill="#fff" stroke-width="5.5" />
 
-                    <ellipse cx="94" cy="142" rx="14" ry="9" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
-                    <ellipse cx="146" cy="142" rx="14" ry="9" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
-                    <path d="M90 140 v5 M98 140 v5 M142 140 v5 M150 140 v5" stroke="#d99a5b" stroke-width="1.5" stroke-linecap="round" />
+                        <g class="eyes-open" fill="#141414" stroke="none">
+                            <ellipse cx="102" cy="112" rx="5" ry="3.8" />
+                            <path d="M134 108 L146 112" stroke="#141414" stroke-width="5" fill="none" />
+                        </g>
+                        <g class="eyes-happy" fill="none" stroke-width="4.5">
+                            <path d="M94 114 q8 -9 16 0" />
+                            <path d="M132 114 q8 -9 16 0" />
+                        </g>
+                        <g class="eyes-sleepy" fill="none" stroke-width="4.5">
+                            <path d="M94 112 q8 5 16 0" />
+                            <path d="M132 112 q8 5 16 0" />
+                        </g>
+
+                        <path d="M116 118 q4 -2 8 0" fill="none" stroke-width="4" />
+                        <path d="M106 128 q4 4 9 0 q4 -4 8 -1 q4 3 9 -2" fill="none" stroke-width="4" />
+                        <path d="M38 116 H68 M42 136 L66 126 M172 112 H202 M170 120 L196 132" fill="none" stroke-width="4.5" />
+                    </g>
+
+                    <g filter="url(#crayon)" stroke="#1f4fa0" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M42 146 A80 16 0 0 0 202 146 L176 212 Q172 224 160 224 H84 Q72 224 68 212 Z" fill="#f4f1ea" stroke-width="3.5" />
+                    </g>
+                    <text x="122" y="200" text-anchor="middle" font-family="DM Mono, monospace" font-size="20" font-weight="500" letter-spacing="1" fill="#1f4fa0">pet me</text>
+
+                    <g filter="url(#doodle)" fill="#fff" stroke="#141414" stroke-width="4.5">
+                        <ellipse cx="96" cy="157" rx="14" ry="9" />
+                        <ellipse cx="148" cy="157" rx="14" ry="9" />
+                    </g>
                 </svg>
             </button>
             <p class="cat-says" aria-live="polite">click to pet ♡</p>
