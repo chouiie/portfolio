@@ -78,9 +78,14 @@ nav .brand {
   font-weight: 500;
 }
 
-nav .brand span:first-child {
-  font-size: 1.6rem;
-  letter-spacing: 0;
+nav .brand img {
+  width: 2.75rem;
+  height: 2.75rem;
+  transition: rotate 400ms;
+}
+
+nav .brand:hover img {
+  rotate: 25deg;
 }
 
 nav a.current:not(.brand) {
