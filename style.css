@@ -633,7 +633,23 @@ h2.about-title {
   gap: 1rem;
 
   .file-card {
+    display: grid;
+    grid-template-columns: minmax(10rem, 16rem) 1fr;
+    align-items: center;
+    gap: 1.5rem;
     margin: 0;
+    padding: 1rem;
+
+    > div {
+      padding-right: 0.5rem;
+    }
+  }
+
+  .project-image {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+    border-radius: 0.9rem;
   }
 
   .file-card h2 {
@@ -751,13 +767,6 @@ h1.projects-title {
   }
 }
 
-.searchBar {
-  width: 100%;
-  margin-block-end: 1.5em;
-  padding: 0.6em 1em !important;
-  border-radius: 999px !important;
-  box-sizing: border-box;
-}
 
 /* ===== Lab 6 ===== */
 dl.stats {
@@ -872,6 +881,10 @@ circle.selected {
 }
 
 @media (max-width: 40em) {
+  .projects .file-card {
+    grid-template-columns: 1fr;
+  }
+
   nav {
     gap: 0.25em 1em;
     padding-block: 1rem;

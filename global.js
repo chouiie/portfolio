@@ -165,12 +165,17 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         .slice(0, 3)
         .join('-') + '.txt';
 
+    const image = project.image?.startsWith('http') ? project.image : BASE_PATH + (project.image ?? '');
+
     const article = document.createElement('article');
     article.className = 'file-card';
     article.innerHTML = `
-      <p class="file-name"><img src="${BASE_PATH}images/glass-star.png" alt="">${fileName}<span class="project-year">${project.year ?? ''}</span></p>
-      <${headingLevel}>${project.title ?? 'Untitled'}</${headingLevel}>
-      <p>${project.description ?? ''}</p>
+      <img class="project-image" src="${image}" alt="">
+      <div>
+        <p class="file-name"><img src="${BASE_PATH}images/glass-star.png" alt="">${fileName}<span class="project-year">${project.year ?? ''}</span></p>
+        <${headingLevel}>${project.title ?? 'Untitled'}</${headingLevel}>
+        <p>${project.description ?? ''}</p>
+      </div>
     `;
     containerElement.appendChild(article);
   }
