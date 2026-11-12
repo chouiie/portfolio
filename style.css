@@ -502,7 +502,7 @@ h2.about-title {
 }
 
 .bio {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
   line-height: 1.7;
   color: color-mix(in oklch, var(--ink), var(--muted) 35%);
 }
@@ -532,7 +532,7 @@ h2.about-title {
 
   p {
     margin: 0;
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
     color: color-mix(in oklch, var(--ink), var(--muted) 30%);
   }
 
