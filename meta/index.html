@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=8">
     <script type="module" src="../global.js"></script>
     <script type="module" src="main.js"></script>
 </head>
 <body>
-    <h1>Meta</h1>
-    <p>This page includes stats about the code of this website.</p>
+    <h1 class="page-title">Meta</h1>
+    <p class="bio">This page includes stats about the code of this website.</p>
 
-    <h2>Summary</h2>
-    <div id="stats"></div>
+    <article class="file-card meta-card">
+        <p class="file-name"><img src="../images/glass-star.png" alt="">summary.txt</p>
+        <h2>Summary</h2>
+        <div id="stats"></div>
+    </article>
 
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    <article class="file-card meta-card">
+        <p class="file-name"><img src="../images/glass-star.png" alt="">commits-by-time.txt</p>
+        <h2>Commits by time of day</h2>
+        <div id="chart"></div>
 
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
+        <p id="selection-count">No commits selected</p>
+        <dl id="language-breakdown" class="stats"></dl>
+    </article>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
