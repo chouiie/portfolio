@@ -22,12 +22,12 @@ document.body.prepend(nav);
 let brand = document.createElement('a');
 brand.className = 'brand';
 brand.href = BASE_PATH;
-brand.innerHTML = `<img src="${BASE_PATH}images/logo.png" alt=""><span>Chau Nguyen</span>`;
+brand.innerHTML = `<img src="${BASE_PATH}images/logo.png?v=2" alt=""><span>Chau Nguyen</span>`;
 nav.append(brand);
 
 let favicon = document.createElement('link');
 favicon.rel = 'icon';
-favicon.href = `${BASE_PATH}images/favicon.png`;
+favicon.href = `${BASE_PATH}images/favicon.png?v=2`;
 document.head.append(favicon);
 
 for (let p of pages) {
