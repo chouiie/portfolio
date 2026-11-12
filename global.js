@@ -56,7 +56,7 @@ for (let p of pages) {
 
 let dockLinks = [
   { url: 'projects/', label: 'works', icon: '📁' },
-  { url: 'https://drive.google.com/file/d/1oIZCvXnO-fspuchmxtbr2vuaV_4rJ6xf/view?usp=sharing', label: 'experience', icon: '💼' },
+  { url: 'https://drive.google.com/file/d/1oIZCvXnO-fspuchmxtbr2vuaV_4rJ6xf/view?usp=sharing', label: 'resume', icon: '💼' },
   { url: 'profile/', label: 'profile', icon: `<img src="${BASE_PATH}images/profile-2.jpg" alt="">` },
 ];
 
