@@ -11,7 +11,7 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'profile/', title: 'Profile' },
   { url: 'meta/', title: 'Meta' },
-  { url: 'resume/', title: 'Resume' },
+  { url: 'https://drive.google.com/file/d/1oIZCvXnO-fspuchmxtbr2vuaV_4rJ6xf/view?usp=sharing', title: 'Resume' },
   { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/chouiie', title: 'GitHub' },
 ];
@@ -56,7 +56,7 @@ for (let p of pages) {
 
 let dockLinks = [
   { url: 'projects/', label: 'works', icon: '📁' },
-  { url: 'resume/', label: 'experience', icon: '💼' },
+  { url: 'https://drive.google.com/file/d/1oIZCvXnO-fspuchmxtbr2vuaV_4rJ6xf/view?usp=sharing', label: 'experience', icon: '💼' },
   { url: 'profile/', label: 'profile', icon: `<img src="${BASE_PATH}images/profile-2.jpg" alt="">` },
 ];
 
@@ -67,9 +67,12 @@ dock.setAttribute('aria-label', 'Quick links');
 
 for (let d of dockLinks) {
   let a = document.createElement('a');
-  a.href = BASE_PATH + d.url;
+  a.href = d.url.startsWith('http') ? d.url : BASE_PATH + d.url;
   a.innerHTML = `<span class="icon">${d.icon}</span><span class="dock-label">${d.label}</span>`;
   a.classList.toggle('current', a.pathname === location.pathname);
+  if (a.host !== location.host) {
+    a.target = '_blank';
+  }
   dock.append(a);
 }
 
