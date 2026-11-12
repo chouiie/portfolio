@@ -244,7 +244,7 @@ button:hover {
   gap: 1rem clamp(1rem, 3vw, 3rem);
   margin-inline: calc(50% - 50vw);
   padding: 0 clamp(1rem, 5vw, 5rem);
-  min-height: calc(100vh - 12rem);
+  min-height: calc(100svh - 16rem);
 }
 
 .visually-hidden {
@@ -410,6 +410,28 @@ button:hover {
   max-width: 60ch;
 }
 
+/* Profile page */
+
+.profile-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+
+  img {
+    width: 12rem;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .about {
+    flex: 1 1 20em;
+    margin: 0;
+  }
+}
+
 /* Bottom dock of icon links */
 
 .dock {
@@ -431,7 +453,7 @@ button:hover {
     display: grid;
     justify-items: center;
     gap: 0.3rem;
-    width: 4.5rem;
+    width: 5.5rem;
     padding: 0.4rem 0.25rem;
     border-radius: 0.9rem;
     text-decoration: none;
