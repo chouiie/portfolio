@@ -474,11 +474,12 @@ button:hover {
 
 /* Star paperclip straddling the top edge of the front photo */
 /* Star paperclip holding the top edge of the front photo */
-.clip {
+.photo .clip {
   position: absolute;
   left: 50%;
   top: -16%;
   width: 40%;
+  height: auto;
   translate: -50% 0;
   rotate: 4deg;
   z-index: 3;
