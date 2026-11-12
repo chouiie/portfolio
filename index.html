@@ -9,27 +9,75 @@
     <script type="module" src="index.js" defer></script>
 </head>
 <body>
+    <h1 class="visually-hidden">Hi, I’m Chau! I find stories in data.</h1>
+
     <div class="hero">
-        <div>
-            <p class="hello">hello, world ✿</p>
-            <h1>Hi, I’m Chau! 🐱</h1>
-            <p>Welcome to my personal site and portfolio! Here you can find information about my projects, skills, and experiences. Feel free to explore and reach out if you have any questions or opportunities!</p>
+        <div class="hero-left" aria-hidden="true">
+            <p class="label greeting">hi there,</p>
+            <span class="big">I find stories in</span>
+            <p class="label">data science @ ucsd</p>
         </div>
 
-        <figure class="polaroid">
-            <img src="images/profile-2.jpg" alt="Chau standing on a cliff above the ocean at sunset">
-            <figcaption>sunset chasing ☀︎</figcaption>
-        </figure>
-    </div>
+        <div class="hero-cup">
+            <button class="pet-cat" type="button" aria-label="Pet the cat">
+                <svg viewBox="0 0 240 260" aria-hidden="true">
+                    <ellipse cx="120" cy="238" rx="104" ry="14" fill="#e9e6df" />
 
-    <h2>pet the cat</h2>
-    <div class="cat-box">
-        <button class="cat" type="button" aria-label="Pet the cat">😺</button>
-        <div>
-            <p class="cat-says" aria-live="polite">psst… click me</p>
-            <p class="cat-mood">pets today: <span class="cat-count">0</span></p>
+                    <path d="M186 158 q42 -4 38 34 q-4 30 -44 26" fill="none" stroke="#fbfaf7" stroke-width="15" stroke-linecap="round" />
+                    <path d="M186 158 q42 -4 38 34 q-4 30 -44 26" fill="none" stroke="#e3e0d8" stroke-width="2" />
+
+                    <g class="head">
+                        <path d="M70 102 L78 46 L112 76 Z" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M170 102 L162 46 L128 76 Z" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M82 84 L85 60 L102 76 Z" fill="#f4b6c2" />
+                        <path d="M158 84 L155 60 L138 76 Z" fill="#f4b6c2" />
+
+                        <ellipse cx="120" cy="116" rx="58" ry="48" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
+                        <path d="M112 72 q8 10 16 0 M104 78 l4 8 M136 78 l-4 8" fill="none" stroke="#d99a5b" stroke-width="4" stroke-linecap="round" />
+
+                        <g class="eyes-open" fill="#2a2a2a">
+                            <ellipse cx="98" cy="112" rx="6" ry="8" />
+                            <ellipse cx="142" cy="112" rx="6" ry="8" />
+                            <circle cx="100" cy="109" r="2" fill="#fff" />
+                            <circle cx="144" cy="109" r="2" fill="#fff" />
+                        </g>
+                        <g class="eyes-happy" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round">
+                            <path d="M90 114 q8 -10 16 0" />
+                            <path d="M134 114 q8 -10 16 0" />
+                        </g>
+                        <g class="eyes-sleepy" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round">
+                            <path d="M90 112 q8 6 16 0" />
+                            <path d="M134 112 q8 6 16 0" />
+                        </g>
+
+                        <ellipse cx="84" cy="128" rx="9" ry="5" fill="#f4a3b4" opacity="0.6" />
+                        <ellipse cx="156" cy="128" rx="9" ry="5" fill="#f4a3b4" opacity="0.6" />
+                        <path d="M115 123 h10 l-5 6 Z" fill="#e8849a" />
+                        <path d="M120 129 q-4 6 -9 3 M120 129 q4 6 9 3" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" />
+                        <path d="M72 120 h-22 M72 128 l-20 5 M168 120 h22 M168 128 l20 5" stroke="#d99a5b" stroke-width="1.5" stroke-linecap="round" />
+                    </g>
+
+                    <path d="M50 148 h140 l-13 74 q-4 18 -22 18 h-70 q-18 0 -22 -18 Z" fill="#fbfaf7" stroke="#e3e0d8" stroke-width="2" />
+                    <path d="M53 166 h134 l-2.5 12 h-129 Z" fill="#a8c47f" />
+                    <text x="120" y="212" text-anchor="middle" font-family="DM Mono, monospace" font-size="20" letter-spacing="2" fill="#3e5aa8">chau</text>
+                    <rect x="44" y="140" width="152" height="12" rx="6" fill="#fbfaf7" stroke="#e3e0d8" stroke-width="2" />
+
+                    <ellipse cx="94" cy="142" rx="14" ry="9" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
+                    <ellipse cx="146" cy="142" rx="14" ry="9" fill="#f2c48d" stroke="#d99a5b" stroke-width="2" />
+                    <path d="M90 140 v5 M98 140 v5 M142 140 v5 M150 140 v5" stroke="#d99a5b" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+            <p class="cat-says" aria-live="polite">click to pet ♡</p>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+            <em class="big">data.</em>
+            <p class="label">recently: data analyst intern <a href="resume/" tabindex="-1">@idx</a></p>
         </div>
     </div>
+
+    <h2>about me</h2>
+    <p class="about">Welcome to my personal site and portfolio! Here you can find information about my projects, skills, and experiences. Feel free to explore and reach out if you have any questions or opportunities!</p>
 
     <h2>My GitHub Stats</h2>
     <div id="profile-stats"></div>
@@ -38,5 +86,13 @@
     <div class="projects">
         <!-- Dynamically added content will appear here -->
     </div>
+
+    <div class="dock" role="navigation" aria-label="Quick links">
+        <a href="projects/"><span class="icon">📁</span>works</a>
+        <a href="meta/"><span class="icon">📊</span>data</a>
+        <a href="resume/"><span class="icon"><img src="images/profile-2.jpg" alt=""></span>profile</a>
+    </div>
+
+    <p class="last-updated">last updated <span class="updated-date"></span></p>
 </body>
 </html>

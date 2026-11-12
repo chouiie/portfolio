@@ -21,6 +21,12 @@ const BASE_PATH = new URL('./', import.meta.url).pathname;
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
+let brand = document.createElement('a');
+brand.className = 'brand';
+brand.href = BASE_PATH;
+brand.innerHTML = '<span>🐱</span><span>Chau Nguyen</span>';
+nav.append(brand);
+
 for (let p of pages) {
   let url = p.url;
   url = !url.startsWith('http') ? BASE_PATH + url : url;
